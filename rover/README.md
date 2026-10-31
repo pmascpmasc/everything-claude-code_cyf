@@ -4,7 +4,7 @@
 
 | 階段 | 狀態 | 文件 |
 |------|------|------|
-| 1. 車體設計 | 提案中，待確認 | [design/body-design.md](design/body-design.md) |
+| 1. 車體設計 | 結構 + 流線造型提案，待確認 | [design/body-design.md](design/body-design.md) |
 | 2. 傳動系統設計 | 未開始 | — |
 | 3. 可列印零件 | 未開始 | — |
 | 4. 韌體 | 舊版保留於 `firmware/`，待傳動定案後重審 | — |
