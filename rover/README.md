@@ -12,3 +12,5 @@
 ## 2026-11-04 方向調整
 
 目標改為參加國研院戶外機器人障礙賽（12/19–20）。小車設計不適用比賽規模，賽事版提案見 [design/competition-design.md](design/competition-design.md)。
+
+製作計畫（遙控組、預算 10 萬、三種底盤實測後選一）見 [design/build-plan.md](design/build-plan.md)。
