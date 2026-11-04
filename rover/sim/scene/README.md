@@ -42,9 +42,32 @@ simready-validate --asset_list assets.txt --profile Robotics-Prop --version 4.0.
 - **預覽渲染**：11/11 通過。第一次跑時第 1、5 關的目標在機器人視角中太小，原因是攝影機擺太遠、太平；改成關前 3 m 並往下看後通過。
 - **SimReady**：10 個資產都只剩 `SR.004` 一項失敗，原因是 `qcode`（Wikidata 物件編碼）空白。這個工作環境連不上 wikidata.org，我沒有憑記憶填編碼。補上方法：在各資產的 `sm_<name>.json` 填入 `qcode`，或開放網路後由程式查詢。
 
+## 在 Isaac Sim 5.0 實測（Windows）
+
+`isaac/run_isaac_checks.py` 用 Isaac Sim 自帶的 Python 開啟 `out/course.usda`，實際跑 PhysX 和 RTX：
+
+```bat
+cd 你的\everything-claude-code_cyf
+git pull
+C:\isaacsim\python.bat rover\sim\scene\isaac\run_isaac_checks.py
+```
+
+`C:\isaacsim` 換成你的 Isaac Sim 安裝資料夾（裡面有 `python.bat`）。預設不開視窗；加 `--gui` 可以看過程，加 `--skip-render` 只跑物理。
+
+| 測試 | 內容 | 通過條件 |
+|---|---|---|
+| `stage_opens`、`stage_contents` | 場景能開、內容完整 | 49 個網格、16 個剛體 |
+| `rtx_render`、`rtx_semantics` | 7 台攝影機的 RTX 彩色與語意分割圖 | 每台都有圖；分割圖認得欄架、泥巴、樓梯、錐筒、坡道、碎石 |
+| `settle_barriers`、`fixed_obstacles_static` | 靜置 2 秒 | 路障移動 < 2 cm、傾斜 < 3°；固定設施不動 |
+| `platform_collider`、`gravel_collider` | 40 kg 箱子落在平台和碎石堆上 | 停在正確高度，沒有穿透 |
+| `mud_friction`、`asphalt_friction` | 40 kg 橡膠底箱子以 1 m/s 滑行 | 泥巴等效摩擦 0.09–0.25，柏油 > 0.5 |
+| `barrier_knocked`、`other_barriers_untouched` | 以 1 m/s 撞第 5 關第一組錐筒 | 被撞的移動 > 10 cm 或傾斜 > 20°，其他不動 |
+
+結果在 `out/isaac/report.json` 和 `out/isaac/renders/`。
+
 ## 與文章的差異
 
 - **沒有 Blender 來源檔**：賽道直接從規格以程式生成，所以不需要 Blender MCP 盤點；`check_scene.py` 盤點的是生成後的 USD。
-- **沒有 NVIDIA GPU**：ovphysx 與 ovrtx 都無法執行。物理檢查改成靜態規則檢查，沒有實際跑 PhysX；預覽渲染改用 three.js，不是 RTX。所以 RTX 光照效果和 PhysX 碰撞行為都**沒有驗證**。第一次在 Isaac Sim 開啟時，要檢查車輛與錐筒的碰撞、泥水坑摩擦。
+- **雲端環境沒有 NVIDIA GPU**：這裡的物理檢查是靜態規則，預覽渲染用 three.js。PhysX 與 RTX 的實測由上面的 Isaac Sim 腳本在本機完成。
 - **沒有多代理協作**：各步驟是可重跑的程式，判斷性的工作（語意分類、材質分類、修正攝影機）由我完成，判斷理由寫在程式註解裡。
 - **整個場景沒有 SimReady 場景級 profile**：驗證是逐一資產跑 Robotics-Prop；組合後的場景由 `check_scene.py` 與預覽渲染把關。

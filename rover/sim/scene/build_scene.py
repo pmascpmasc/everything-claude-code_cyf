@@ -27,7 +27,7 @@ MATERIALS = {
     "concrete": dict(color=(0.72, 0.71, 0.68), rough=0.85, metal=0.0, sf=0.9, df=0.8, rest=0.05, density=2400, cls="concrete", finish="rough"),
     "steel_grate": dict(color=(0.61, 0.64, 0.67), rough=0.5, metal=1.0, sf=0.9, df=0.8, rest=0.1, density=7850, cls="metal", finish="brushed"),
     "plywood":  dict(color=(0.79, 0.64, 0.42), rough=0.8, metal=0.0, sf=0.8, df=0.7, rest=0.1, density=600, cls="wood", finish="unfinished"),
-    "mud":      dict(color=(0.37, 0.25, 0.15), rough=0.35, metal=0.0, sf=0.15, df=0.15, rest=0.0, density=1700, cls="soil", finish="wet"),
+    "mud":      dict(color=(0.37, 0.25, 0.15), rough=0.35, metal=0.0, sf=0.15, df=0.15, rest=0.0, density=1700, cls="soil", finish="wet", combine="min"),
     "gravel":   dict(color=(0.55, 0.54, 0.51), rough=0.95, metal=0.0, sf=0.7, df=0.6, rest=0.05, density=1600, cls="stone", finish="loose"),
     "cone_pvc": dict(color=(0.94, 0.35, 0.10), rough=0.6, metal=0.0, sf=0.5, df=0.4, rest=0.2, density=1300, cls="plastic", finish="matte"),
     "hazard_yellow": dict(color=(0.95, 0.77, 0.0), rough=0.6, metal=0.0, sf=0.6, df=0.5, rest=0.1, density=1200, cls="plastic", finish="painted"),
@@ -174,6 +174,11 @@ def define_material(stage, root, key):
     pm.CreateRestitutionAttr(v["rest"])
     pm.CreateDensityAttr(v["density"])
     UsdSemantics.LabelsAPI.Apply(mat.GetPrim(), "material").CreateLabelsAttr(Vt.TokenArray([v["cls"]]))
+    if v.get("combine"):
+        # PhysX averages the two contact frictions by default (mud 0.15 + tyre 0.9 -> ~0.5); "min" keeps the mud slippery.
+        # PhysxSchema is not in usd-core, so the applied schema and attribute are authored by name.
+        mat.GetPrim().AddAppliedSchema("PhysxMaterialAPI")
+        mat.GetPrim().CreateAttribute("physxMaterial:frictionCombineMode", Sdf.ValueTypeNames.Token).Set(v["combine"])
     return mat
 
 

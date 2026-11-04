@@ -25,7 +25,7 @@ def Xform "mud_pit" (
     def "Looks"
     {
         def Material "mud" (
-            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material", "PhysxMaterialAPI"]
         )
         {
             token outputs:surface.connect = </mud_pit/Looks/mud/PreviewSurface.outputs:surface>
@@ -33,6 +33,7 @@ def Xform "mud_pit" (
             float physics:dynamicFriction = 0.15
             float physics:restitution = 0
             float physics:staticFriction = 0.15
+            custom token physxMaterial:frictionCombineMode = "min"
             token[] semantics:labels:material = ["soil"]
 
             def Shader "PreviewSurface"
