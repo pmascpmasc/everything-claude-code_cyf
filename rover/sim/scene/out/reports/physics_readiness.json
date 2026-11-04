@@ -1,0 +1,67 @@
+{
+  "dynamic": [
+    "/course/station_5/barrier_1",
+    "/course/station_5/barrier_2",
+    "/course/station_5/barrier_3",
+    "/course/station_5/barrier_4",
+    "/course/station_5/barrier_5",
+    "/course/station_5/barrier_6",
+    "/course/station_5/barrier_7",
+    "/course/station_5/barrier_8"
+  ],
+  "kinematic": [
+    "/course/station_1/hurdle_h05",
+    "/course/station_1/hurdle_h10",
+    "/course/station_1/hurdle_h15",
+    "/course/station_1/hurdle_h20",
+    "/course/station_2/mud_pit",
+    "/course/station_3_4/stairs_platform_ramp",
+    "/course/station_6/pitch_roll_ramps",
+    "/course/station_7/gravel_pile"
+  ],
+  "measured_vs_spec": {
+    "hurdle_5cm_height": 0.05,
+    "hurdle_10cm_height": 0.1,
+    "hurdle_15cm_height": 0.15,
+    "hurdle_20cm_height": 0.2,
+    "stair_rises_m": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "stair_slope_deg": 35.0,
+    "stair_width_m": 1.2,
+    "ramp_deg": 20.0,
+    "gravel_peak_m": 0.977,
+    "mud_pit_length_width_m": [
+      20.0,
+      2.4
+    ],
+    "pitch_roll_length_width_m": [
+      20.0,
+      2.4
+    ],
+    "gravel_length_width_m": [
+      20.0,
+      2.4
+    ],
+    "pitch_roll_max_slope_deg": {
+      "interior": 17.91,
+      "entry_exit": 26.42
+    }
+  },
+  "findings": [
+    {
+      "rule": "SPEC.PITCHROLL.ENTRY",
+      "severity": "warn",
+      "prim": "/course/station_6/pitch_roll_ramps/ramps",
+      "message": "entry/exit taper reaches 26.4° (course model; real entry not yet published)"
+    }
+  ],
+  "summary": {
+    "fail": 0,
+    "warn": 1
+  }
+}

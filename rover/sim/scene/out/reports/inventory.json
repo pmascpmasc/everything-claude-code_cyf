@@ -1,0 +1,45 @@
+{
+  "file": "out/course.usda",
+  "up_axis": "Z",
+  "meters_per_unit": 1.0,
+  "counts": {
+    "meshes": 49,
+    "materials": 30,
+    "cameras": 7,
+    "lights": 2,
+    "rigid_bodies": 16,
+    "dynamic_bodies": 8,
+    "kinematic_bodies": 8
+  },
+  "classes": [
+    "barrier_bar",
+    "bypass_lane",
+    "curb",
+    "floor",
+    "gravel",
+    "hurdle",
+    "mud",
+    "pitch_roll_ramp",
+    "platform",
+    "ramp",
+    "robot_target",
+    "stairs",
+    "start_line",
+    "traffic_cone",
+    "wall"
+  ],
+  "cameras": [
+    "/course/cameras/overview",
+    "/course/cameras/fpv_station_1",
+    "/course/cameras/fpv_station_2",
+    "/course/cameras/fpv_station_3",
+    "/course/cameras/fpv_station_5",
+    "/course/cameras/fpv_station_6",
+    "/course/cameras/fpv_station_7"
+  ],
+  "missing": {
+    "semantic_labels": [],
+    "collision_meshes": [],
+    "physics_materials": []
+  }
+}

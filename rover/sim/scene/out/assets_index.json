@@ -1,0 +1,146 @@
+{
+  "hurdle_h05": {
+    "path": "assets/hurdle_h05/simready_usd/sm_hurdle_h05.usda",
+    "class": "hurdle",
+    "extents": [
+      0.1,
+      2.4,
+      0.05
+    ],
+    "mass": 7.2,
+    "kinematic": true,
+    "materials": [
+      "hazard_yellow"
+    ]
+  },
+  "hurdle_h10": {
+    "path": "assets/hurdle_h10/simready_usd/sm_hurdle_h10.usda",
+    "class": "hurdle",
+    "extents": [
+      0.1,
+      2.4,
+      0.1
+    ],
+    "mass": 14.4,
+    "kinematic": true,
+    "materials": [
+      "hazard_yellow"
+    ]
+  },
+  "hurdle_h15": {
+    "path": "assets/hurdle_h15/simready_usd/sm_hurdle_h15.usda",
+    "class": "hurdle",
+    "extents": [
+      0.1,
+      2.4,
+      0.15
+    ],
+    "mass": 21.599999999999998,
+    "kinematic": true,
+    "materials": [
+      "hazard_yellow"
+    ]
+  },
+  "hurdle_h20": {
+    "path": "assets/hurdle_h20/simready_usd/sm_hurdle_h20.usda",
+    "class": "hurdle",
+    "extents": [
+      0.1,
+      2.4,
+      0.2
+    ],
+    "mass": 28.8,
+    "kinematic": true,
+    "materials": [
+      "hazard_yellow"
+    ]
+  },
+  "traffic_cone": {
+    "path": "assets/traffic_cone/simready_usd/sm_traffic_cone.usda",
+    "class": "traffic_cone",
+    "extents": [
+      0.4,
+      0.4,
+      0.7
+    ],
+    "mass": 2.5,
+    "kinematic": false,
+    "materials": [
+      "cone_pvc"
+    ]
+  },
+  "cone_barrier": {
+    "path": "assets/cone_barrier/simready_usd/sm_cone_barrier.usda",
+    "class": "barrier",
+    "extents": [
+      0.4,
+      1.8,
+      0.7
+    ],
+    "mass": 5.8,
+    "kinematic": false,
+    "materials": [
+      "cone_pvc",
+      "hazard_yellow"
+    ]
+  },
+  "mud_pit": {
+    "path": "assets/mud_pit/simready_usd/sm_mud_pit.usda",
+    "class": "mud_pit",
+    "extents": [
+      20.2,
+      2.6,
+      0.1
+    ],
+    "mass": 4080.0000000000005,
+    "kinematic": true,
+    "materials": [
+      "concrete",
+      "mud"
+    ]
+  },
+  "stairs_platform_ramp": {
+    "path": "assets/stairs_platform_ramp/simready_usd/sm_stairs_platform_ramp.usda",
+    "class": "stairs",
+    "extents": [
+      8.1756,
+      1.2,
+      1.0
+    ],
+    "mass": 1500.0,
+    "kinematic": true,
+    "materials": [
+      "steel_grate"
+    ]
+  },
+  "pitch_roll_ramps": {
+    "path": "assets/pitch_roll_ramps/simready_usd/sm_pitch_roll_ramps.usda",
+    "class": "pitch_roll_ramp",
+    "extents": [
+      20.2,
+      2.6,
+      0.3435
+    ],
+    "mass": 600.0,
+    "kinematic": true,
+    "materials": [
+      "concrete",
+      "plywood"
+    ]
+  },
+  "gravel_pile": {
+    "path": "assets/gravel_pile/simready_usd/sm_gravel_pile.usda",
+    "class": "gravel",
+    "extents": [
+      20.4,
+      2.8,
+      0.9768
+    ],
+    "mass": 38400.0,
+    "kinematic": true,
+    "materials": [
+      "concrete",
+      "gravel"
+    ]
+  }
+}

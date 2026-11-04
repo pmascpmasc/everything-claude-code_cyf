@@ -1,0 +1,321 @@
+#usda 1.0
+(
+    defaultPrim = "course"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "course"
+{
+    def "Looks"
+    {
+        def Material "asphalt" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+        )
+        {
+            token outputs:surface.connect = </course/Looks/asphalt/PreviewSurface.outputs:surface>
+            float physics:density = 2300
+            float physics:dynamicFriction = 0.8
+            float physics:restitution = 0.05
+            float physics:staticFriction = 0.9
+            token[] semantics:labels:material = ["asphalt"]
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.32, 0.33, 0.34)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.9
+                token outputs:surface
+            }
+        }
+
+        def Material "hazard_yellow" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+        )
+        {
+            token outputs:surface.connect = </course/Looks/hazard_yellow/PreviewSurface.outputs:surface>
+            float physics:density = 1200
+            float physics:dynamicFriction = 0.5
+            float physics:restitution = 0.1
+            float physics:staticFriction = 0.6
+            token[] semantics:labels:material = ["plastic"]
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.95, 0.77, 0)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.6
+                token outputs:surface
+            }
+        }
+
+        def Material "concrete" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+        )
+        {
+            token outputs:surface.connect = </course/Looks/concrete/PreviewSurface.outputs:surface>
+            float physics:density = 2400
+            float physics:dynamicFriction = 0.8
+            float physics:restitution = 0.05
+            float physics:staticFriction = 0.9
+            token[] semantics:labels:material = ["concrete"]
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.72, 0.71, 0.68)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.85
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "ground" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(-86, -58, -0.1), (174, 62, 0)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </course/Looks/asphalt>
+        rel material:binding:physics = </course/Looks/asphalt>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-86, -58, -0.1), (174, -58, -0.1), (174, 62, -0.1), (-86, 62, -0.1), (-86, -58, 0), (174, -58, 0), (174, 62, 0), (-86, 62, 0)]
+        token[] semantics:labels:class = ["floor"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def "station_1"
+    {
+        def Xform "hurdle_h05" (
+            prepend references = @../assets/hurdle_h05/simready_usd/sm_hurdle_h05.usda@
+        )
+        {
+            double3 xformOp:translate = (14.5, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def Xform "hurdle_h10" (
+            prepend references = @../assets/hurdle_h10/simready_usd/sm_hurdle_h10.usda@
+        )
+        {
+            double3 xformOp:translate = (17, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def Xform "hurdle_h15" (
+            prepend references = @../assets/hurdle_h15/simready_usd/sm_hurdle_h15.usda@
+        )
+        {
+            double3 xformOp:translate = (19.5, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def Xform "hurdle_h20" (
+            prepend references = @../assets/hurdle_h20/simready_usd/sm_hurdle_h20.usda@
+        )
+        {
+            double3 xformOp:translate = (22, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def "station_2"
+    {
+        def Xform "mud_pit" (
+            prepend references = @../assets/mud_pit/simready_usd/sm_mud_pit.usda@
+        )
+        {
+            double3 xformOp:translate = (41.4, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def "station_3_4"
+    {
+        def Xform "stairs_platform_ramp" (
+            prepend references = @../assets/stairs_platform_ramp/simready_usd/sm_stairs_platform_ramp.usda@
+        )
+        {
+            double3 xformOp:translate = (76, -4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def "station_5"
+    {
+        def Xform "barrier_1" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -200.96004)
+            double3 xformOp:translate = (100.31171756422113, -7.4740483448842845, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_2" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -4.9396667)
+            double3 xformOp:translate = (108.13297013156055, -7.480108760288319, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_3" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -152.68028)
+            double3 xformOp:translate = (115.9320065605574, -7.928777496944361, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_4" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 71.88475)
+            double3 xformOp:translate = (119.00034744618057, -0.7717496016316552, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_5" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -66.63363)
+            double3 xformOp:translate = (120.40204722007, 6.751897640996462, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_6" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -196.98076)
+            double3 xformOp:translate = (113.88464383104134, 10.499852954213203, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_7" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 20.531988)
+            double3 xformOp:translate = (106.32215497780071, 12.279238907235815, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+
+        def Xform "barrier_8" (
+            prepend references = @../assets/cone_barrier/simready_usd/sm_cone_barrier.usda@
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -143.32603)
+            double3 xformOp:translate = (100.58421292830414, 6.871851267102244, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+        }
+    }
+
+    def "station_6"
+    {
+        def Xform "pitch_roll_ramps" (
+            prepend references = @../assets/pitch_roll_ramps/simready_usd/sm_pitch_roll_ramps.usda@
+        )
+        {
+            double3 xformOp:translate = (82.7, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def "station_7"
+    {
+        def Xform "gravel_pile" (
+            prepend references = @../assets/gravel_pile/simready_usd/sm_gravel_pile.usda@
+        )
+        {
+            double3 xformOp:translate = (41.4, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+
+    def Mesh "start_line" (
+        prepend apiSchemas = ["MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0.35, -5.7, 0), (0.65, -3.3, 0.004)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </course/Looks/hazard_yellow>
+        rel material:binding:physics = </course/Looks/hazard_yellow>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(0.35, -5.7, 0), (0.65, -5.7, 0), (0.65, -3.3, 0), (0.35, -3.3, 0), (0.35, -5.7, 0.004), (0.65, -5.7, 0.004), (0.65, -3.3, 0.004), (0.35, -3.3, 0.004)]
+        token[] semantics:labels:class = ["start_line"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "finish_line" (
+        prepend apiSchemas = ["MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0.35, 3.3, 0), (0.65, 5.7, 0.004)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </course/Looks/hazard_yellow>
+        rel material:binding:physics = </course/Looks/hazard_yellow>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(0.35, 3.3, 0), (0.65, 3.3, 0), (0.65, 5.7, 0), (0.35, 5.7, 0), (0.35, 3.3, 0.004), (0.65, 3.3, 0.004), (0.65, 5.7, 0.004), (0.35, 5.7, 0.004)]
+        token[] semantics:labels:class = ["robot_target"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "bypass_1" (
+        prepend apiSchemas = ["MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(12, -8.2, 0), (88, -6.8, 0.004)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </course/Looks/concrete>
+        rel material:binding:physics = </course/Looks/concrete>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(12, -8.2, 0), (88, -8.2, 0), (88, -6.8, 0), (12, -6.8, 0), (12, -8.2, 0.004), (88, -8.2, 0.004), (88, -6.8, 0.004), (12, -6.8, 0.004)]
+        token[] semantics:labels:class = ["bypass_lane"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "bypass_2" (
+        prepend apiSchemas = ["MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(29, 6.8, 0), (95, 8.2, 0.004)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </course/Looks/concrete>
+        rel material:binding:physics = </course/Looks/concrete>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(29, 6.8, 0), (95, 6.8, 0), (95, 8.2, 0), (29, 8.2, 0), (29, 6.8, 0.004), (95, 6.8, 0.004), (95, 8.2, 0.004), (29, 8.2, 0.004)]
+        token[] semantics:labels:class = ["bypass_lane"]
+        uniform token subdivisionScheme = "none"
+    }
+}
+

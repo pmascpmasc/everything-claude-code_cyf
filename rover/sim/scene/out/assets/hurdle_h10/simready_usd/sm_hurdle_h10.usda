@@ -1,0 +1,67 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary SimReady_Metadata = {
+            string asset_name = "hurdle_h10"
+            string asset_type = "prop"
+            string source_file = "rover/sim/scene/course_spec.json"
+            string usd_date_generated = "2026-11-04"
+        }
+    }
+    defaultPrim = "hurdle_h10"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "hurdle_h10" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "SemanticsLabelsAPI:class"]
+)
+{
+    bool physics:kinematicEnabled = 1
+    float physics:mass = 14.4
+    token[] semantics:labels:class = ["hurdle"]
+
+    def "Looks"
+    {
+        def Material "hazard_yellow" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+        )
+        {
+            token outputs:surface.connect = </hurdle_h10/Looks/hazard_yellow/PreviewSurface.outputs:surface>
+            float physics:density = 1200
+            float physics:dynamicFriction = 0.5
+            float physics:restitution = 0.1
+            float physics:staticFriction = 0.6
+            token[] semantics:labels:material = ["plastic"]
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.95, 0.77, 0)
+                float inputs:metallic = 0
+                float inputs:roughness = 0.6
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "bar" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.05, -1.2, 0), (0.05, 1.2, 0.1)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </hurdle_h10/Looks/hazard_yellow>
+        rel material:binding:physics = </hurdle_h10/Looks/hazard_yellow>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(-0.05, -1.2, 0), (0.05, -1.2, 0), (0.05, 1.2, 0), (-0.05, 1.2, 0), (-0.05, -1.2, 0.1), (0.05, -1.2, 0.1), (0.05, 1.2, 0.1), (-0.05, 1.2, 0.1)]
+        uniform token subdivisionScheme = "none"
+    }
+}
+

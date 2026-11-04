@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "materials": [
+    {
+      "material_id": "asphalt",
+      "material_class": "asphalt",
+      "material_type": "UsdPreviewSurface",
+      "finish": "rough",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.32,
+          0.33,
+          0.34
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.9,
+        "dynamic_friction": 0.8,
+        "restitution": 0.05,
+        "density_kg_m3": 2300
+      },
+      "tags": [
+        "asphalt",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "concrete",
+      "material_class": "concrete",
+      "material_type": "UsdPreviewSurface",
+      "finish": "rough",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.72,
+          0.71,
+          0.68
+        ],
+        "roughness": 0.85,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.9,
+        "dynamic_friction": 0.8,
+        "restitution": 0.05,
+        "density_kg_m3": 2400
+      },
+      "tags": [
+        "concrete",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "steel_grate",
+      "material_class": "metal",
+      "material_type": "UsdPreviewSurface",
+      "finish": "brushed",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.61,
+          0.64,
+          0.67
+        ],
+        "roughness": 0.5,
+        "metallic": 1.0
+      },
+      "physics": {
+        "static_friction": 0.9,
+        "dynamic_friction": 0.8,
+        "restitution": 0.1,
+        "density_kg_m3": 7850
+      },
+      "tags": [
+        "metal",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "plywood",
+      "material_class": "wood",
+      "material_type": "UsdPreviewSurface",
+      "finish": "unfinished",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.79,
+          0.64,
+          0.42
+        ],
+        "roughness": 0.8,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.8,
+        "dynamic_friction": 0.7,
+        "restitution": 0.1,
+        "density_kg_m3": 600
+      },
+      "tags": [
+        "wood",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "mud",
+      "material_class": "soil",
+      "material_type": "UsdPreviewSurface",
+      "finish": "wet",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.37,
+          0.25,
+          0.15
+        ],
+        "roughness": 0.35,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.15,
+        "dynamic_friction": 0.15,
+        "restitution": 0.0,
+        "density_kg_m3": 1700
+      },
+      "tags": [
+        "soil",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "gravel",
+      "material_class": "stone",
+      "material_type": "UsdPreviewSurface",
+      "finish": "loose",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.55,
+          0.54,
+          0.51
+        ],
+        "roughness": 0.95,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.7,
+        "dynamic_friction": 0.6,
+        "restitution": 0.05,
+        "density_kg_m3": 1600
+      },
+      "tags": [
+        "stone",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "cone_pvc",
+      "material_class": "plastic",
+      "material_type": "UsdPreviewSurface",
+      "finish": "matte",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.94,
+          0.35,
+          0.1
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.5,
+        "dynamic_friction": 0.4,
+        "restitution": 0.2,
+        "density_kg_m3": 1300
+      },
+      "tags": [
+        "plastic",
+        "obstacle_course"
+      ]
+    },
+    {
+      "material_id": "hazard_yellow",
+      "material_class": "plastic",
+      "material_type": "UsdPreviewSurface",
+      "finish": "painted",
+      "condition": "outdoor",
+      "pbr": {
+        "diffuse_color": [
+          0.95,
+          0.77,
+          0.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0
+      },
+      "physics": {
+        "static_friction": 0.6,
+        "dynamic_friction": 0.5,
+        "restitution": 0.1,
+        "density_kg_m3": 1200
+      },
+      "tags": [
+        "plastic",
+        "obstacle_course"
+      ]
+    }
+  ]
+}

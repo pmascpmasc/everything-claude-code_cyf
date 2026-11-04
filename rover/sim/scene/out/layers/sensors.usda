@@ -1,0 +1,82 @@
+#usda 1.0
+(
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "course"
+{
+    def "cameras"
+    {
+        def Camera "overview"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 24
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0.977668501477417, -0.21015304237365035, 1.3877787807814454e-17, 0), (0.12890508999273695, 0.5996888969227329, 0.7897826945948866, 0), (-0.16597523608317508, -0.7721456635173796, 0.6133867420465167, 0), (35, -104.99999999999997, 84.99999999999999, 0.9999999999999998) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_1"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0, -1, 0, 0), (0.11588069956017835, 0, 0.9932631390872431, 0), (-0.9932631390872431, 0, 0.11588069956017835, 0), (12, -4.5, 0.3499999999999997, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_2"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0, -1, 0, 0), (0.11982016019085819, 0, 0.9927956130099674, 0), (-0.9927956130099674, 0, 0.11982016019085819, 0), (29.5, -4.5, 0.34999999999999964, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_3"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0, -1, 0, 0), (0.11588069956017835, 0, 0.9932631390872431, 0), (-0.9932631390872431, 0, 0.11588069956017835, 0), (73.5, -4.5, 0.3499999999999997, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_5"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (-0.6514641043327591, -0.7586794585105863, -6.93889390390723e-18, 0), (0.07816123918923257, -0.06711561926549967, 0.994679000652478, -0), (-0.7546425256068728, 0.6479976642586703, 0.10302274341614057, 0), (97.74796440444045, -5.27260063566903, 0.34999999999999704, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_6"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0, 1, 0, 0), (-0.12403473458920858, 0, 0.9922778767136677, -0), (0.9922778767136676, -0, 0.12403473458920856, 0), (94.49999999999999, 4.499999999999999, 0.3499999999999997, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+
+        def Camera "fpv_station_7"
+        {
+            float2 clippingRange = (0.05, 500)
+            float focalLength = 18
+            float horizontalAperture = 36
+            float verticalAperture = 20.25
+            matrix4d xformOp:transform = ( (0, 1, 0, 0), (-0.11219043660790691, 0, 0.9936867242414618, -0), (0.9936867242414618, -0, 0.11219043660790691, 0), (53.5, 4.499999999999999, 0.3500000000000005, 1) )
+            uniform token[] xformOpOrder = ["xformOp:transform"]
+        }
+    }
+}
+

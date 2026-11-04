@@ -1,0 +1,25 @@
+#usda 1.0
+(
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def "course"
+{
+    def "lights"
+    {
+        def DistantLight "sun"
+        {
+            float inputs:angle = 0.53
+            float inputs:intensity = 3000
+            float3 xformOp:rotateXYZ = (-35, 20, 0)
+            uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+        }
+
+        def DomeLight "sky"
+        {
+            float inputs:intensity = 600
+        }
+    }
+}
+
