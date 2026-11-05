@@ -1,0 +1,1792 @@
+{
+    "out/assets/cone_barrier/simready_usd/sm_cone_barrier.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/gravel_pile/simready_usd/sm_gravel_pile.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/hurdle_h05/simready_usd/sm_hurdle_h05.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/hurdle_h10/simready_usd/sm_hurdle_h10.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/hurdle_h15/simready_usd/sm_hurdle_h15.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/hurdle_h20/simready_usd/sm_hurdle_h20.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/mud_pit/simready_usd/sm_mud_pit.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/pitch_roll_ramps/simready_usd/sm_pitch_roll_ramps.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/stairs_platform_ramp/simready_usd/sm_stairs_platform_ramp.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    },
+    "out/assets/traffic_cone/simready_usd/sm_traffic_cone.usda": {
+        "features_summary": {
+            "FET_000_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.007', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.004', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_000_STANDARD': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RV.001', 'com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_000_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.SR.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_001_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "1.0.1"
+            },
+            "FET_003_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_003_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.4.0"
+            },
+            "FET_003_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_004_MUJOCO": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_MUJOCO': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.MUJOCO.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_NEWTON": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_NEWTON': {'version': '0.1.0'}}]",
+                "optional requirements": "['com.nvidia.simready.NEWTON.COL.001', 'com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_004_PHYSX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.4.0"
+            },
+            "FET_004_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_STANDARD': {'version': '0.2.0'}}]",
+                "optional requirements": "['com.nvidia.simready.RB.MB.001']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_005_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.GSP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_MDL": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.MDL.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_006_OPENPBR": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.VM.PBR.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_006_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_007_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.NVM.001', 'com.nvidia.simready.NVM.002', 'com.nvidia.simready.NVM.003']",
+                "passed": false,
+                "version": "0.2.0"
+            },
+            "FET_010_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "optional requirements": "['com.nvidia.simready.DISP.001']",
+                "passed": false,
+                "version": "0.1.0"
+            },
+            "FET_011_RTX": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_011_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.2.0"
+            },
+            "FET_031_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_033_STANDARD": {
+                "blocking_failure": true,
+                "dependencies": "[{'FET_031_STANDARD': {'version': '0.1.0'}}]",
+                "failing requirements": "['com.nvidia.simready.SR.004']",
+                "passed": false,
+                "requirement_messages": "{\"com.nvidia.simready.SR.004\": [\"Required metadata fields are empty: qcode. Each required field in the USD/sidecar metadata union must have a non-empty value.\"]}",
+                "version": "0.4.0"
+            },
+            "FET_046_STANDARD": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_011_STANDARD': {'version': '0.2.0'}}]",
+                "passed": true,
+                "version": "0.1.0"
+            },
+            "FET_100_ISAAC": {
+                "blocking_failure": false,
+                "dependencies": "[{'FET_003_PHYSX': {'version': '0.4.0'}}]",
+                "optional requirements": "['com.nvidia.simready.ISA.001']",
+                "passed": false,
+                "version": "0.4.0"
+            }
+        },
+        "profile_id": "Robotics-Prop",
+        "profile_version": "4.0.0",
+        "simready_validate_version": "2026.8.0",
+        "tier_versions": {
+            "sensors": "2026.8.0",
+            "tier_core": "2026.8.0"
+        }
+    }
+}

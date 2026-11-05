@@ -1,0 +1,22 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary SimReady_Metadata = {
+            string asset_name = "shalun_course"
+            string asset_type = "environment"
+            string source_file = "rover/sim/scene/course_spec.json"
+            string usd_date_generated = "2026-11-04"
+        }
+    }
+    defaultPrim = "course"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./layers/sensors.usda@,
+        @./layers/lighting.usda@,
+        @./layers/physics.usda@,
+        @./layers/geometry.usda@
+    ]
+    upAxis = "Z"
+)
+

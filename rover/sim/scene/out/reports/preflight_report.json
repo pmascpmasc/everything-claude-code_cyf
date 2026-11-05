@@ -1,0 +1,171 @@
+{
+  "renderer": "three.js 0.160 (WebGL, SwiftShader) — stand-in for ovrtx",
+  "image_size": [
+    960,
+    540
+  ],
+  "checks": [
+    {
+      "id": "target_visible.fpv_station_1",
+      "status": "pass",
+      "detail": "hurdle covers 2.0% of the robot-eye view"
+    },
+    {
+      "id": "target_visible.fpv_station_2",
+      "status": "pass",
+      "detail": "mud covers 5.6% of the robot-eye view"
+    },
+    {
+      "id": "target_visible.fpv_station_3",
+      "status": "pass",
+      "detail": "stairs covers 5.9% of the robot-eye view"
+    },
+    {
+      "id": "target_visible.fpv_station_5",
+      "status": "pass",
+      "detail": "barrier/barrier_bar/traffic_cone covers 1.9% of the robot-eye view"
+    },
+    {
+      "id": "target_visible.fpv_station_6",
+      "status": "pass",
+      "detail": "pitch_roll_ramp covers 7.7% of the robot-eye view"
+    },
+    {
+      "id": "target_visible.fpv_station_7",
+      "status": "pass",
+      "detail": "gravel covers 7.6% of the robot-eye view"
+    },
+    {
+      "id": "labels_attached",
+      "status": "pass",
+      "detail": "0 pixels without a known class label across all views"
+    },
+    {
+      "id": "materials_render",
+      "status": "pass",
+      "detail": "0 meshes without a bound UsdPreviewSurface colour"
+    },
+    {
+      "id": "lighting_plausible",
+      "status": "pass",
+      "detail": "overview 0.609, fpv_station_1 0.635, fpv_station_2 0.629, fpv_station_3 0.623, fpv_station_5 0.638, fpv_station_6 0.644, fpv_station_7 0.629"
+    },
+    {
+      "id": "camera_not_blocked",
+      "status": "pass",
+      "detail": "all robot-eye views see past the ground"
+    },
+    {
+      "id": "object_scale",
+      "status": "pass",
+      "detail": "cone 0.7 m (spec 0.7); hurdles 0.05/0.1/0.15/0.2 m"
+    }
+  ],
+  "views": {
+    "overview": {
+      "luminance": 0.609,
+      "semantic_pixels": {
+        "floor": 342493,
+        "background": 170561,
+        "start_line": 9,
+        "bypass_lane": 2542,
+        "hurdle": 33,
+        "mud": 711,
+        "curb": 196,
+        "robot_target": 4,
+        "wall": 350,
+        "gravel": 619,
+        "stairs": 46,
+        "platform": 131,
+        "ramp": 58,
+        "traffic_cone": 60,
+        "barrier_bar": 13,
+        "pitch_roll_ramp": 574
+      }
+    },
+    "fpv_station_1": {
+      "luminance": 0.635,
+      "semantic_pixels": {
+        "floor": 293071,
+        "bypass_lane": 6849,
+        "hurdle": 10133,
+        "wall": 1597,
+        "gravel": 886,
+        "curb": 56,
+        "mud": 126,
+        "background": 205475,
+        "pitch_roll_ramp": 84,
+        "stairs": 69,
+        "traffic_cone": 41,
+        "barrier_bar": 13
+      }
+    },
+    "fpv_station_2": {
+      "luminance": 0.629,
+      "semantic_pixels": {
+        "floor": 264500,
+        "curb": 8556,
+        "mud": 29084,
+        "bypass_lane": 6831,
+        "wall": 8056,
+        "pitch_roll_ramp": 153,
+        "stairs": 132,
+        "traffic_cone": 50,
+        "background": 198166,
+        "barrier_bar": 33,
+        "gravel": 2839
+      }
+    },
+    "fpv_station_3": {
+      "luminance": 0.623,
+      "semantic_pixels": {
+        "floor": 286517,
+        "bypass_lane": 6434,
+        "stairs": 30806,
+        "curb": 1289,
+        "pitch_roll_ramp": 2343,
+        "traffic_cone": 198,
+        "background": 190766,
+        "barrier_bar": 47
+      }
+    },
+    "fpv_station_5": {
+      "luminance": 0.638,
+      "semantic_pixels": {
+        "floor": 298876,
+        "traffic_cone": 8066,
+        "background": 209458,
+        "barrier_bar": 2000
+      }
+    },
+    "fpv_station_6": {
+      "luminance": 0.644,
+      "semantic_pixels": {
+        "floor": 260783,
+        "curb": 6276,
+        "pitch_roll_ramp": 39893,
+        "bypass_lane": 5816,
+        "ramp": 3541,
+        "platform": 2395,
+        "stairs": 313,
+        "mud": 18,
+        "gravel": 216,
+        "background": 199109,
+        "hurdle": 8,
+        "wall": 32
+      }
+    },
+    "fpv_station_7": {
+      "luminance": 0.629,
+      "semantic_pixels": {
+        "floor": 249529,
+        "wall": 46713,
+        "gravel": 39565,
+        "bypass_lane": 3121,
+        "curb": 1053,
+        "mud": 49,
+        "background": 178370
+      }
+    }
+  }
+}

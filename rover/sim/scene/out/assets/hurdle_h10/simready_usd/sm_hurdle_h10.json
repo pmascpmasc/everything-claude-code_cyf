@@ -1,0 +1,13 @@
+{
+  "author": "rover team",
+  "asset_license": "CC-BY 4.0",
+  "category": "obstacle",
+  "qcode": "",
+  "rigid_body_count": 1,
+  "asset_extents": [
+    0.1,
+    2.4,
+    0.1
+  ],
+  "mass": 14.4
+}

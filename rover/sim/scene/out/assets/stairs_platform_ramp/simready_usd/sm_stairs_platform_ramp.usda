@@ -1,0 +1,182 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary SimReady_Metadata = {
+            string asset_name = "stairs_platform_ramp"
+            string asset_type = "prop"
+            string source_file = "rover/sim/scene/course_spec.json"
+            string usd_date_generated = "2026-11-04"
+        }
+    }
+    defaultPrim = "stairs_platform_ramp"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "stairs_platform_ramp" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "SemanticsLabelsAPI:class"]
+)
+{
+    bool physics:kinematicEnabled = 1
+    float physics:mass = 1500
+    token[] semantics:labels:class = ["stairs"]
+
+    def "Looks"
+    {
+        def Material "steel_grate" (
+            prepend apiSchemas = ["PhysicsMaterialAPI", "SemanticsLabelsAPI:material"]
+        )
+        {
+            token outputs:surface.connect = </stairs_platform_ramp/Looks/steel_grate/PreviewSurface.outputs:surface>
+            float physics:density = 7850
+            float physics:dynamicFriction = 0.8
+            float physics:restitution = 0.1
+            float physics:staticFriction = 0.9
+            token[] semantics:labels:material = ["metal"]
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.61, 0.64, 0.67)
+                float inputs:metallic = 1
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "step_1" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0, -0.6, 0), (0.2856296, 0.6, 0.2)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(0, -0.6, 0), (0.2856296, -0.6, 0), (0.2856296, 0.6, 0), (0, 0.6, 0), (0, -0.6, 0.2), (0.2856296, -0.6, 0.2), (0.2856296, 0.6, 0.2), (0, 0.6, 0.2)]
+        token[] semantics:labels:class = ["stairs"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "step_2" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0.2856296, -0.6, 0), (0.5712592, 0.6, 0.4)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(0.2856296, -0.6, 0), (0.5712592, -0.6, 0), (0.5712592, 0.6, 0), (0.2856296, 0.6, 0), (0.2856296, -0.6, 0.4), (0.5712592, -0.6, 0.4), (0.5712592, 0.6, 0.4), (0.2856296, 0.6, 0.4)]
+        token[] semantics:labels:class = ["stairs"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "step_3" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0.5712592, -0.6, 0), (0.85688883, 0.6, 0.6)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(0.5712592, -0.6, 0), (0.85688883, -0.6, 0), (0.85688883, 0.6, 0), (0.5712592, 0.6, 0), (0.5712592, -0.6, 0.6), (0.85688883, -0.6, 0.6), (0.85688883, 0.6, 0.6), (0.5712592, 0.6, 0.6)]
+        token[] semantics:labels:class = ["stairs"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "step_4" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(0.85688883, -0.6, 0), (1.1425184, 0.6, 0.8)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(0.85688883, -0.6, 0), (1.1425184, -0.6, 0), (1.1425184, 0.6, 0), (0.85688883, 0.6, 0), (0.85688883, -0.6, 0.8), (1.1425184, -0.6, 0.8), (1.1425184, 0.6, 0.8), (0.85688883, 0.6, 0.8)]
+        token[] semantics:labels:class = ["stairs"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "step_5" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(1.1425184, -0.6, 0), (1.428148, 0.6, 1)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(1.1425184, -0.6, 0), (1.428148, -0.6, 0), (1.428148, 0.6, 0), (1.1425184, 0.6, 0), (1.1425184, -0.6, 1), (1.428148, -0.6, 1), (1.428148, 0.6, 1), (1.1425184, 0.6, 1)]
+        token[] semantics:labels:class = ["stairs"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "platform" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(1.428148, -0.6, 0), (5.428148, 0.6, 1)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 3, 2, 0, 2, 1, 4, 5, 6, 4, 6, 7, 0, 1, 5, 0, 5, 4, 1, 2, 6, 1, 6, 5, 2, 3, 7, 2, 7, 6, 3, 0, 4, 3, 4, 7]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, -0), (0, 1, -0), (0, 1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(1.428148, -0.6, 0), (5.428148, -0.6, 0), (5.428148, 0.6, 0), (1.428148, 0.6, 0), (1.428148, -0.6, 1), (5.428148, -0.6, 1), (5.428148, 0.6, 1), (1.428148, 0.6, 1)]
+        token[] semantics:labels:class = ["platform"]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "ramp" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "MaterialBindingAPI", "SemanticsLabelsAPI:class"]
+    )
+    {
+        float3[] extent = [(5.428148, -0.6, 0), (8.175626, 0.6, 1)]
+        int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 1, 2, 3, 5, 4, 0, 4, 1, 0, 3, 4, 1, 5, 2, 1, 4, 5, 2, 3, 0, 2, 5, 3]
+        rel material:binding = </stairs_platform_ramp/Looks/steel_grate>
+        rel material:binding:physics = </stairs_platform_ramp/Looks/steel_grate>
+        normal3f[] normals = [(0, -1, 0), (0, -1, 0), (0, -1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0.34202006, 0, 0.9396926), (0.34202006, 0, 0.9396926), (0.34202006, 0, 0.9396926), (0.34202006, -0, 0.9396926), (0.34202006, -0, 0.9396926), (0.34202006, -0, 0.9396926), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0)] (
+            interpolation = "faceVarying"
+        )
+        uniform token orientation = "rightHanded"
+        uniform token physics:approximation = "convexHull"
+        point3f[] points = [(5.428148, -0.6, 0), (8.175626, -0.6, 0), (5.428148, -0.6, 1), (5.428148, 0.6, 0), (8.175626, 0.6, 0), (5.428148, 0.6, 1)]
+        token[] semantics:labels:class = ["ramp"]
+        uniform token subdivisionScheme = "none"
+    }
+}
+
